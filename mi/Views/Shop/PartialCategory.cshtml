@@ -1,0 +1,28 @@
+﻿@model IEnumerable<mi.Areas.Panel.Models.tbl_category>
+<div class="sidebar-box-2">
+    <h2 class="heading mb-4"><a href="#">Kadın</a></h2>
+    <ul>
+        @foreach (var item in Model.Where(x => x.gender == "Female").ToList())
+        {
+            <li><a href="@Url.Action("Products",new {categoryId=item.categoryId})">@item.categoryName</a></li>
+        }
+    </ul>
+    <h2 class="heading mb-4"><a href="#">Erkek</a></h2>
+    <ul>
+        @foreach (var item in Model.Where(x => x.gender == "Male").ToList())
+        {
+            <li><a href="@Url.Action("Products",new {categoryId=item.categoryId})">@item.categoryName</a></li>
+        }
+    </ul>
+
+</div>
+
+<div class="sidebar-box-2">
+    <h2 class="heading mb-2"><a href="#">Çanta</a></h2>
+    <ul>
+        @foreach (var item in Model.Where(x => x.gender == "Çanta").ToList())
+        {
+            <li><a href="#">@item.categoryName</a></li>
+        }
+    </ul>
+</div>

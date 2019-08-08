@@ -9,7 +9,11 @@ using System.Web.Mvc;
 
 namespace mi.Areas.Panel.Controllers
 {
- 
+    public enum Gender
+    {
+        Male,
+        Female
+    }
     public class CategoryController : Controller
     { 
         
@@ -22,6 +26,7 @@ namespace mi.Areas.Panel.Controllers
         }
         public ActionResult Create()
         {
+            
             return View();
         }
         [HttpPost]
@@ -35,6 +40,8 @@ namespace mi.Areas.Panel.Controllers
 
         public ActionResult Edit(int id)
         {
+            var selected= repository.Get(id).gender;
+            ViewBag.gender = new SelectList(Enum.GetValues(typeof(Gender)), selected);
             return View(repository.Get(id));
         }
 

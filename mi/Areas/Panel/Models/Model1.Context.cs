@@ -26,8 +26,8 @@ namespace mi.Areas.Panel.Models
         }
     
         public virtual DbSet<tbl_brand> tbl_brand { get; set; }
-        public virtual DbSet<tbl_category> tbl_category { get; set; }
         public virtual DbSet<tbl_product> tbl_product { get; set; }
         public virtual DbSet<tbl_productImage> tbl_productImage { get; set; }
+        public virtual DbSet<tbl_category> tbl_category { get; set; }
     }
 }

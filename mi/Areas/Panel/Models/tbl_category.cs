@@ -22,6 +22,7 @@ namespace mi.Areas.Panel.Models
     
         public int categoryId { get; set; }
         public string categoryName { get; set; }
+        public string gender { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_product> tbl_product { get; set; }

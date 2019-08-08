@@ -1366,6 +1366,9 @@
     <Content Include="Views\sample\product-single.html" />
     <Content Include="Views\sample\shop.html" />
     <Content Include="Web.config" />
+    <Content Include="Views\_Shared\_footer.cshtml" />
+    <Content Include="Views\_Shared\_header.cshtml" />
+    <Content Include="Views\Shop\Products.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -1405,6 +1408,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Areas\Panel\PanelAreaRegistration.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1424,6 +1428,7 @@
     <Content Include="Areas\Panel\Views\Category\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shop\PartialCategory.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1433,7 +1438,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

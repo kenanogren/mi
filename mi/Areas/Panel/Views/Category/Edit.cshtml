@@ -1,5 +1,5 @@
 ﻿@model mi.Areas.Panel.Models.tbl_category
-
+@using mi.Areas.Panel.Controllers
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Areas/Panel/Views/Shared/_LayoutAdmin.cshtml";
@@ -11,26 +11,33 @@
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>tbl_category</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.categoryId)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.categoryName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.categoryName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.categoryName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Kaydet" class="btn btn-default" />
-            </div>
+<div class="form-horizontal">
+    <h4>tbl_category</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.categoryId)
+    <div class="form-group">
+        @Html.Label("Cinsiyet", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.gender, new SelectList(Enum.GetValues(typeof(Gender))),
+                    "Cinsiyetini seç", htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.categoryId, "", new { @class = "text-danger" })
         </div>
     </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.categoryName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.categoryName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.categoryName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Kaydet" class="btn btn-default" />
+        </div>
+    </div>
+</div>
 }
 
 <div>

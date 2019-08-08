@@ -28,8 +28,8 @@ namespace mi.Areas.Panel.Models
         public Nullable<int> brandId { get; set; }
     
         public virtual tbl_brand tbl_brand { get; set; }
-        public virtual tbl_category tbl_category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_productImage> tbl_productImage { get; set; }
+        public virtual tbl_category tbl_category { get; set; }
     }
 }

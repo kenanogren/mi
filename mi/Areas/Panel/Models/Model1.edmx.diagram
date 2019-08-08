@@ -6,12 +6,12 @@
     <edmx:Diagrams>
       <Diagram DiagramId="843ad0e1c805407aa3cccb348703811d" Name="Diagram1">
         <EntityTypeShape EntityType="MoriconModel.tbl_brand" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MoriconModel.tbl_category" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MoriconModel.tbl_product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="MoriconModel.FK__tbl_produ__brand__2F10007B" ManuallyRouted="false" />
-        <AssociationConnector Association="MoriconModel.FK__tbl_produ__categ__2E1BDC42" ManuallyRouted="false" />
         <EntityTypeShape EntityType="MoriconModel.tbl_productImage" Width="1.5" PointX="5.25" PointY="1.5" />
         <AssociationConnector Association="MoriconModel.FK__tbl_produ__produ__31EC6D26" />
+        <EntityTypeShape EntityType="MoriconModel.tbl_category" Width="1.5" PointX="0.75" PointY="4.875" />
+        <AssociationConnector Association="MoriconModel.FK__tbl_produ__categ__2E1BDC42" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
