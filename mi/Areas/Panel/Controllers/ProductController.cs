@@ -25,7 +25,7 @@ namespace mi.Areas.Panel.Controllers
             return View();
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create(tbl_product product,IEnumerable<HttpPostedFileBase> image1)
         {
             if (product != null)
@@ -61,7 +61,7 @@ namespace mi.Areas.Panel.Controllers
             return View(repository.Get(id));
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit(tbl_product product,IEnumerable<HttpPostedFileBase> image1)
         {
             if (product!=null)

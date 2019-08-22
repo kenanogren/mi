@@ -18,6 +18,7 @@ namespace mi.Areas.Panel.Models
         public tbl_product()
         {
             this.tbl_productImage = new HashSet<tbl_productImage>();
+            this.orderDetails = new HashSet<orderDetails>();
         }
     
         public int productId { get; set; }
@@ -26,10 +27,13 @@ namespace mi.Areas.Panel.Models
         public Nullable<decimal> price { get; set; }
         public Nullable<int> categoryId { get; set; }
         public Nullable<int> brandId { get; set; }
+        public string description { get; set; }
     
         public virtual tbl_brand tbl_brand { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_productImage> tbl_productImage { get; set; }
         public virtual tbl_category tbl_category { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<orderDetails> orderDetails { get; set; }
     }
 }

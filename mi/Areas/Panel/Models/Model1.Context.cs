@@ -29,5 +29,9 @@ namespace mi.Areas.Panel.Models
         public virtual DbSet<tbl_product> tbl_product { get; set; }
         public virtual DbSet<tbl_productImage> tbl_productImage { get; set; }
         public virtual DbSet<tbl_category> tbl_category { get; set; }
+        public virtual DbSet<orders> orders { get; set; }
+        public virtual DbSet<role> role { get; set; }
+        public virtual DbSet<user> user { get; set; }
+        public virtual DbSet<orderDetails> orderDetails { get; set; }
     }
 }
